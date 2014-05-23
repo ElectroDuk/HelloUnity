@@ -249,3 +249,10 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+
+/obj
+/library
+*.csproj
+*.unityproj
+*.sln
