@@ -23,7 +23,7 @@ function Update () {
 			Placing = true;
 			
 			// Define a variable for the preview
-			PrePlaceWall = Instantiate(InvisWall, transform.position + transform.forward * 10, transform.rotation);
+			PrePlaceWall = Instantiate(InvisWall, Vector3(transform.position.x, transform.position.y + 3, transform.position.z) + transform.forward * 10, transform.rotation);
 			
 			// Make sure that the preview wall is a child of the camera so it moves with the camera
 			PrePlaceWall.transform.parent = transform;
@@ -43,10 +43,7 @@ function Update () {
 				Debug.Log("PrePlaceWall.transform.position is " + PrePlaceWall.transform.localPosition);
 					
 				// Place the real wall in the position of the preview wall
-				//var placedWall : GameObject = Instantiate(Wall, PrePlaceWall.transform.position, PrePlaceWall.transform.rotation);
-				var placedWall : GameObject = Instantiate(Wall, transform.position + transform.forward * 10, transform.rotation);
-					
-				Debug.Log("placedWall.transform.position is " + placedWall.transform.localPosition);
+				var placedWall : GameObject = Instantiate(Wall, PrePlaceWall.transform.position, PrePlaceWall.transform.rotation);
 					
 				// Destroy the Preview wall
 				Destroy(PrePlaceWall);
