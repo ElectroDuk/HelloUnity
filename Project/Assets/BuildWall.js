@@ -23,7 +23,7 @@ function Update () {
 			Placing = true;
 			
 			// Define a variable for the preview
-			PrePlaceWall = Instantiate(InvisWall, Vector3(transform.position.x, transform.position.y + 3, transform.position.z) + transform.forward * 10, transform.rotation);
+			PrePlaceWall = Instantiate(InvisWall, Vector3(transform.position.x, transform.position.y + 3, transform.position.z) + transform.forward * 5, transform.rotation);
 			
 			// Make sure that the preview wall is a child of the camera so it moves with the camera
 			PrePlaceWall.transform.parent = transform;
@@ -56,7 +56,8 @@ function Update () {
 	// Make sure that if the PrePlaceWall exists that it has not rotated
 	if(PrePlaceWall != null){
 
-		//PrePlaceWall.transform.rotation.z = 0;
+		PrePlaceWall.transform.rotation.x = 0;
+		PrePlaceWall.transform.rotation.z = 0;
 	
 	}
 	

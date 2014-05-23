@@ -4694,7 +4694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvisWall: {fileID: 100000, guid: d3a2a3b4e43f97545a5b0f9a723305af, type: 2}
-  Wall: {fileID: 100000, guid: 32f5dbeeaf056814e9721975a04895fd, type: 2}
+  Wall: {fileID: 100114, guid: 030a0a0fc86a51442a665d9dcb92ba82, type: 2}
   Placing: 0
   PrePlaceWall: {fileID: 0}
 --- !u!1 &1728561769
