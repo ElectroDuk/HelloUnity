@@ -36,17 +36,21 @@ function Update () {
 		}else{ // If there is currently a wall being previewed
 		
 			if(PrePlaceWall != null){
-			
-				Debug.Log("PrePlaceWall not null");
 				
 				// There is no longer a wall being previewed
 				Placing = false;
+				
+				Debug.Log("PrePlaceWall.transform.position is " + PrePlaceWall.transform.localPosition);
 					
 				// Place the real wall in the position of the preview wall
-				Instantiate(Wall, PrePlaceWall.transform.position, PrePlaceWall.transform.rotation);
+				//var placedWall : GameObject = Instantiate(Wall, PrePlaceWall.transform.position, PrePlaceWall.transform.rotation);
+				var placedWall : GameObject = Instantiate(Wall, transform.position + transform.forward * 10, transform.rotation);
+					
+				Debug.Log("placedWall.transform.position is " + placedWall.transform.localPosition);
 					
 				// Destroy the Preview wall
 				Destroy(PrePlaceWall);
+				
 			}
 		}
 	}
